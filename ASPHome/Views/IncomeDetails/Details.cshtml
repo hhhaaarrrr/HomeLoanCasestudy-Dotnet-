@@ -1,0 +1,74 @@
+﻿@model ASPHome.Models.IncomeDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of Income</h2>
+
+<div>
+    <h4>IncomeDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProperityLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProperityLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProperityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProperityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeofEmployeement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeofEmployeement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Retirementage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Retirementage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organizationtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organizationtype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployerName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ASPHome.Models.IncomeDetails>
+
+@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Income Details </h2>
+<br />
+
+<h4>Few steps to complete application......</h4>
+
+<p>Please follow the link below (page1)</p>
+
+<br />
+<p>
+    @Html.ActionLink("Create Income profile", "Create")
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProperityLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProperityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeofEmployeement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Retirementage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organizationtype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployerName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProperityLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProperityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeofEmployeement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Retirementage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organizationtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployerName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ApplicationId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ApplicationId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ApplicationId })
+            </td>
+        </tr>
+        <!--<-->@*div>
+                <button><a href="https://localhost:44385/Personal">Personals</a></button>
+            </div>*@
+
+
+
+    }
+
+</table>
+<br/>
+<h4>Next Step.....</h4>
+<div>
+    <button><a href="https://localhost:44328/Loans">Enter LoanDetails</a></button>
+</div>

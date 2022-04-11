@@ -1,0 +1,80 @@
+﻿@model ASPHome.Models.IncomeDetails
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Income Details</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>IncomeDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProperityLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProperityLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProperityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProperityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeofEmployeement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeofEmployeement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Retirementage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Retirementage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organizationtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organizationtype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployerName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

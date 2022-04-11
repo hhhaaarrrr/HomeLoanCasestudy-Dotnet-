@@ -1,0 +1,24 @@
+﻿@model ASPHome.Models.Personal
+@{
+    ViewBag.Title = "Tracking";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+
+<h2> Application Tracking</h2>
+
+@using (Html.BeginForm("Home"))
+{
+    <p>
+        Id: @Html.TextBoxFor(a => a.Id)
+    </p>
+
+
+
+    <p>
+        PhoneNumber: @Html.TextBoxFor(a => a.Phonenumber)
+    </p>
+    <input type="submit" value="Submit" name="submit">
+}

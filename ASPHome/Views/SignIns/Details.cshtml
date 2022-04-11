@@ -1,0 +1,50 @@
+﻿@model ASPHome.Models.SignIn
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SignIn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conformword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conformword)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
